@@ -1,0 +1,9 @@
+// DE components will be exported from here
+export { default as Footer } from './Footer';
+export { default as Header } from './Header';
+export { default as DeTrackingForm } from './DeTrackingForm';
+export { default as DePackageForm } from './DePackageForm';
+export { default as DeAddressForm } from './DeAddressForm';
+export { default as DeDeliveryDateForm } from './DeDeliveryDateForm';
+export { default as DeReviewForm } from './DeReviewForm';
+export { default as DePaymentForm } from './DePaymentForm';
