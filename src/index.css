@@ -1,0 +1,242 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Modern Royal Mail Design System 2025 - All colors in HSL */
+
+@font-face {
+  font-family: 'Chevin';
+  src: url('/chevinstd-thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Chevin';
+  src: url('/chevinstd-medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Chevin';
+  src: url('/chevinstd-bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: block;
+}
+
+@layer base {
+  :root {
+    /* Core Background Colors */
+    --background: 0 0% 98%;
+    --foreground: 0 0% 9%;
+
+    /* Card System with Glassmorphism */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 15%;
+    --card-glass: 0 0% 100% / 0.8;
+    --card-border: 0 0% 90%;
+
+    /* Popover */
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 15%;
+
+    /* Royal Mail Red Brand Colors */
+    --primary: 0 84% 50%;
+    --primary-light: 0 84% 84%;
+    --primary-dark: 0 84% 35%;
+    --primary-foreground: 0 0% 98%;
+    --primary-variant: 15 84% 50%;
+
+    /* DHL Yellow Brand Colors */
+    --dhl-primary: 48 100% 50%;
+    --dhl-primary-light: 48 100% 84%;
+    --dhl-primary-dark: 48 100% 35%;
+    --dhl-primary-foreground: 0 0% 15%;
+    --primary-foreground: 0 0% 9%;
+
+    /* Modern Secondary Palette */
+    --secondary: 215 25% 95%;
+    --secondary-foreground: 0 0% 15%;
+
+    /* Muted Tones */
+    --muted: 220 15% 96%;
+    --muted-foreground: 220 10% 45%;
+
+    /* Accent Colors */
+    --accent: 142 70% 50%;
+    --accent-light: 142 65% 60%;
+    --accent-foreground: 0 0% 98%;
+
+    /* Status Colors */
+    --success: 142 70% 50%;
+    --success-foreground: 0 0% 98%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Interactive Elements */
+    --border: 220 15% 88%;
+    --input: 220 15% 92%;
+    --ring: 48 100% 50%;
+
+    /* Design System */
+    --radius: 1rem;
+    --radius-lg: 1.5rem;
+    --radius-xl: 2rem;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.1), 0 2px 4px -2px hsl(0 0% 0% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.1), 0 4px 6px -4px hsl(0 0% 0% / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.1), 0 8px 10px -6px hsl(0 0% 0% / 0.1);
+    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.3);
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-light)) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--muted)) 100%);
+    --gradient-glass: linear-gradient(135deg, hsl(0 0% 100% / 0.9) 0%, hsl(0 0% 100% / 0.6) 100%);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    --transition-fast: all 0.15s ease-out;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    font-family: 'Chevin', 'ui-sans-serif', 'system-ui', sans-serif;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Chevin', 'ui-sans-serif', 'system-ui', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6, p, span, div, button, input, textarea, label {
+    font-family: 'Chevin', 'ui-sans-serif', 'system-ui', sans-serif;
+  }
+}
+
+@layer components {
+  /* Glass Card Component */
+  .glass-card {
+    @apply bg-gradient-to-br from-white/90 to-white/60 backdrop-blur-xl border border-white/20 shadow-xl;
+  }
+
+  /* Interactive Hover Effects */
+  .hover-lift {
+    @apply transition-all duration-300 ease-out hover:transform hover:-translate-y-1 hover:shadow-xl;
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300 ease-out hover:shadow-glow;
+  }
+
+  /* Button Variants */
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary to-primary-light text-primary-foreground shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 ease-out;
+  }
+
+  .btn-success {
+    @apply bg-gradient-to-r from-accent to-accent-light text-accent-foreground shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 ease-out;
+  }
+
+  /* Tracking Animation */
+  .pulse-slow {
+    @apply animate-pulse;
+    animation-duration: 2s;
+  }
+
+  /* Status Indicators */
+  .status-pending {
+    @apply bg-gradient-to-r from-warning/20 to-warning/10 border-warning/30;
+  }
+
+  .status-delivered {
+    @apply bg-gradient-to-r from-success/20 to-success/10 border-success/30;
+  }
+
+  .status-in-transit {
+    @apply bg-gradient-to-r from-primary/20 to-primary/10 border-primary/30;
+  }
+
+  /* Smooth Animations */
+  .slide-in {
+    @apply animate-fade-in;
+  }
+
+  .bounce-in {
+    @apply animate-scale-in;
+  }
+
+  /* Hide Scrollbar */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
