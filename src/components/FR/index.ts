@@ -1,0 +1,9 @@
+// FR components will be exported from here
+export { default as Footer } from './Footer';
+export { default as Header } from './Header';
+export { default as FrTrackingForm } from './FrTrackingForm';
+export { default as FrPackageForm } from './FrPackageForm';
+export { default as FrAddressForm } from './FrAddressForm';
+export { default as FrDeliveryDateForm } from './FrDeliveryDateForm';
+export { default as FrReviewForm } from './FrReviewForm';
+export { default as FrPaymentForm } from './FrPaymentForm';
